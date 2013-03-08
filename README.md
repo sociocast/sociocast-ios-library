@@ -19,6 +19,7 @@ Make sure to link the following libraries by going to the project editor and sel
 #### To update from Testing Environment to Production, in SCAPIClient.h, update:
 ````
 #define SOCIOCAST_BASEURL @"http://api-sandbox.sociocast.com/"
+#define SOCIOCAST_BASEURL @"http://api.sociocast.com/"
 ````
 
 #### To update API Version, in SCAPIClient.h, update:

@@ -19,10 +19,20 @@ Make sure to link the following libraries by going to the project editor and sel
 #### To update from Testing Environment to Production, in SCAPIClient.h, update:
 ````
 #define SOCIOCAST_BASEURL @"http://api-sandbox.sociocast.com/"
+````
+to
+````
 #define SOCIOCAST_BASEURL @"http://api.sociocast.com/"
 ````
 
 #### To update API Version, in SCAPIClient.h, update:
 ````
 #define SOCIOCAST_VERSION @"1.0"
+````
+
+#### XCode Appledoc documentation
+To generate Appledoc-style documentation and auto-install in XCode, use [Appledoc](http://gentlebytes.com/appledoc/).
+The following command will run and install documentation for the Sociocast REST API in XCode:
+````
+appledoc Appledoc.plist .
 ````

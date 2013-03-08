@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
+	"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>--ignore</key>
+	<array>
+		<string>Libraries</string>
+		<string>Frameworks</string>
+		<string>AFNetworking</string>
+	</array>
+	<key>--project-name</key>
+	<string>Sociocast REST API</string>
+	<key>--project-company</key>
+	<string>Sociocast Networks LLC</string>
+	<key>--company-id</key>
+	<string>com.sociocast</string>
+	<key>--create-docset</key>
+	<true/>
+	<key>--output</key>
+	<array>
+		<string>docs</string>
+	</array>	
+	<key>--install-docset</key>
+	<true/>
+	<key>--keep-intermediate-files</key>
+	<true/>
+	<key>--verbose</key>
+	<integer>4</integer>
+	<key>--logformat</key>
+	<integer>1</integer>
+</dict>
+</plist>

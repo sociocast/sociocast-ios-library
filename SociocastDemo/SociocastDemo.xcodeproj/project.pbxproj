@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F022AB216D66DED008C1620 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F022AB116D66DED008C1620 /* UIKit.framework */; };
+		7F022AB416D66DED008C1620 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F022AB316D66DED008C1620 /* Foundation.framework */; };
+		7F022AB616D66DED008C1620 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F022AB516D66DED008C1620 /* CoreGraphics.framework */; };
+		7F022ABC16D66DED008C1620 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F022ABA16D66DED008C1620 /* InfoPlist.strings */; };
+		7F022ABE16D66DED008C1620 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F022ABD16D66DED008C1620 /* main.m */; };
+		7F022AC216D66DED008C1620 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F022AC116D66DED008C1620 /* AppDelegate.m */; };
+		7F022AC416D66DED008C1620 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F022AC316D66DED008C1620 /* Default.png */; };
+		7F022AC616D66DED008C1620 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F022AC516D66DED008C1620 /* Default@2x.png */; };
+		7F022AC816D66DED008C1620 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F022AC716D66DED008C1620 /* Default-568h@2x.png */; };
+		7F022ACB16D66DED008C1620 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F022ACA16D66DED008C1620 /* ViewController.m */; };
+		7F022ACE16D66DED008C1620 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F022ACC16D66DED008C1620 /* ViewController_iPhone.xib */; };
+		7F022AD116D66DED008C1620 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F022ACF16D66DED008C1620 /* ViewController_iPad.xib */; };
+		7F022AFA16D6704F008C1620 /* libSociocast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F022AF916D6704F008C1620 /* libSociocast.a */; };
+		7F3B3C5D16DF36FC00265B6C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3B3C5C16DF36FC00265B6C /* SystemConfiguration.framework */; };
+		7F3B3C5F16DF370800265B6C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3B3C5E16DF370800265B6C /* MobileCoreServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7F022AAE16D66DED008C1620 /* SociocastDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SociocastDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F022AB116D66DED008C1620 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7F022AB316D66DED008C1620 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7F022AB516D66DED008C1620 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7F022AB916D66DED008C1620 /* SociocastDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SociocastDemo-Info.plist"; sourceTree = "<group>"; };
+		7F022ABB16D66DED008C1620 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7F022ABD16D66DED008C1620 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F022ABF16D66DED008C1620 /* SociocastDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SociocastDemo-Prefix.pch"; sourceTree = "<group>"; };
+		7F022AC016D66DED008C1620 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7F022AC116D66DED008C1620 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7F022AC316D66DED008C1620 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7F022AC516D66DED008C1620 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7F022AC716D66DED008C1620 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7F022AC916D66DED008C1620 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7F022ACA16D66DED008C1620 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7F022ACD16D66DED008C1620 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		7F022AD016D66DED008C1620 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		7F022AF916D6704F008C1620 /* libSociocast.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSociocast.a; path = "../../../Library/Developer/Xcode/DerivedData/SociocastWorkspace-cbrpfkkcmlmawfgwsulssetueals/Build/Products/Debug-iphoneos/libSociocast.a"; sourceTree = "<group>"; };
+		7F3B3C5C16DF36FC00265B6C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7F3B3C5E16DF370800265B6C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F022AAB16D66DED008C1620 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F3B3C5F16DF370800265B6C /* MobileCoreServices.framework in Frameworks */,
+				7F3B3C5D16DF36FC00265B6C /* SystemConfiguration.framework in Frameworks */,
+				7F022AFA16D6704F008C1620 /* libSociocast.a in Frameworks */,
+				7F022AB216D66DED008C1620 /* UIKit.framework in Frameworks */,
+				7F022AB416D66DED008C1620 /* Foundation.framework in Frameworks */,
+				7F022AB616D66DED008C1620 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F022AA516D66DED008C1620 = {
+			isa = PBXGroup;
+			children = (
+				7F3B3C5E16DF370800265B6C /* MobileCoreServices.framework */,
+				7F3B3C5C16DF36FC00265B6C /* SystemConfiguration.framework */,
+				7F022AF916D6704F008C1620 /* libSociocast.a */,
+				7F022AB716D66DED008C1620 /* SociocastDemo */,
+				7F022AB016D66DED008C1620 /* Frameworks */,
+				7F022AAF16D66DED008C1620 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F022AAF16D66DED008C1620 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F022AAE16D66DED008C1620 /* SociocastDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F022AB016D66DED008C1620 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F022AB116D66DED008C1620 /* UIKit.framework */,
+				7F022AB316D66DED008C1620 /* Foundation.framework */,
+				7F022AB516D66DED008C1620 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F022AB716D66DED008C1620 /* SociocastDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7F022AC016D66DED008C1620 /* AppDelegate.h */,
+				7F022AC116D66DED008C1620 /* AppDelegate.m */,
+				7F022AC916D66DED008C1620 /* ViewController.h */,
+				7F022ACA16D66DED008C1620 /* ViewController.m */,
+				7F022ACC16D66DED008C1620 /* ViewController_iPhone.xib */,
+				7F022ACF16D66DED008C1620 /* ViewController_iPad.xib */,
+				7F022AB816D66DED008C1620 /* Supporting Files */,
+			);
+			path = SociocastDemo;
+			sourceTree = "<group>";
+		};
+		7F022AB816D66DED008C1620 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F022AB916D66DED008C1620 /* SociocastDemo-Info.plist */,
+				7F022ABA16D66DED008C1620 /* InfoPlist.strings */,
+				7F022ABD16D66DED008C1620 /* main.m */,
+				7F022ABF16D66DED008C1620 /* SociocastDemo-Prefix.pch */,
+				7F022AC316D66DED008C1620 /* Default.png */,
+				7F022AC516D66DED008C1620 /* Default@2x.png */,
+				7F022AC716D66DED008C1620 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F022AAD16D66DED008C1620 /* SociocastDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F022AD416D66DED008C1620 /* Build configuration list for PBXNativeTarget "SociocastDemo" */;
+			buildPhases = (
+				7F022AAA16D66DED008C1620 /* Sources */,
+				7F022AAB16D66DED008C1620 /* Frameworks */,
+				7F022AAC16D66DED008C1620 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SociocastDemo;
+			productName = SociocastDemo;
+			productReference = 7F022AAE16D66DED008C1620 /* SociocastDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F022AA616D66DED008C1620 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Sociocast;
+			};
+			buildConfigurationList = 7F022AA916D66DED008C1620 /* Build configuration list for PBXProject "SociocastDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7F022AA516D66DED008C1620;
+			productRefGroup = 7F022AAF16D66DED008C1620 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F022AAD16D66DED008C1620 /* SociocastDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F022AAC16D66DED008C1620 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F022ABC16D66DED008C1620 /* InfoPlist.strings in Resources */,
+				7F022AC416D66DED008C1620 /* Default.png in Resources */,
+				7F022AC616D66DED008C1620 /* Default@2x.png in Resources */,
+				7F022AC816D66DED008C1620 /* Default-568h@2x.png in Resources */,
+				7F022ACE16D66DED008C1620 /* ViewController_iPhone.xib in Resources */,
+				7F022AD116D66DED008C1620 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F022AAA16D66DED008C1620 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F022ABE16D66DED008C1620 /* main.m in Sources */,
+				7F022AC216D66DED008C1620 /* AppDelegate.m in Sources */,
+				7F022ACB16D66DED008C1620 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7F022ABA16D66DED008C1620 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F022ABB16D66DED008C1620 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7F022ACC16D66DED008C1620 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F022ACD16D66DED008C1620 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		7F022ACF16D66DED008C1620 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F022AD016D66DED008C1620 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F022AD216D66DED008C1620 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F022AD316D66DED008C1620 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F022AD516D66DED008C1620 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SociocastDemo/SociocastDemo-Prefix.pch";
+				INFOPLIST_FILE = "SociocastDemo/SociocastDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SociocastWorkspace-cbrpfkkcmlmawfgwsulssetueals/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SOCIOCAST_API_KEY = atlantishome;
+				SOCIOCAST_API_SECRET = atlantishome;
+				SOCIOCAST_CLIENT_ID = C2;
+				USER_HEADER_SEARCH_PATHS = "/Users/jared/Projects/Sociocast/Sociocast/Sociocast/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7F022AD616D66DED008C1620 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SociocastDemo/SociocastDemo-Prefix.pch";
+				INFOPLIST_FILE = "SociocastDemo/SociocastDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SociocastWorkspace-cbrpfkkcmlmawfgwsulssetueals/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SOCIOCAST_API_KEY = atlantishome;
+				SOCIOCAST_API_SECRET = atlantishome;
+				SOCIOCAST_CLIENT_ID = C2;
+				USER_HEADER_SEARCH_PATHS = "/Users/jared/Projects/Sociocast/Sociocast/Sociocast/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F022AA916D66DED008C1620 /* Build configuration list for PBXProject "SociocastDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F022AD216D66DED008C1620 /* Debug */,
+				7F022AD316D66DED008C1620 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F022AD416D66DED008C1620 /* Build configuration list for PBXNativeTarget "SociocastDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F022AD516D66DED008C1620 /* Debug */,
+				7F022AD616D66DED008C1620 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F022AA616D66DED008C1620 /* Project object */;
+}

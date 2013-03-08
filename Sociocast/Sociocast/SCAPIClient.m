@@ -29,7 +29,7 @@
 -(id)initWithBaseURL:(NSURL *)url{
     self = [super initWithBaseURL:url];
     if(self){
-//        [self setDefaultHeader:@"x-api-token" value:@"tokensomething something something"];
+
         [self registerHTTPOperationClass:[AFJSONRequestOperation class]]; // Return JSON
         [self setDefaultHeader:@"Accept" value:@"application/json"];
         [self setParameterEncoding:AFJSONParameterEncoding];

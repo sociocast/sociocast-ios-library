@@ -29,21 +29,17 @@
         
         [[SCAPIClient sharedInstance] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
             if (status == AFNetworkReachabilityStatusNotReachable || status == AFNetworkReachabilityStatusUnknown){
-                NSLog(@"AFNetworkReachabilityStatusNotReachable!!!!!! Changing setting.");
                 [[SCAPIClient sharedInstance] setConnectionAvailable:NO];
                 
             }else {
-                NSLog(@"Connection available. Changing setting.");
                 [[SCAPIClient sharedInstance] setConnectionAvailable:YES];
                 
                 int tempOpCount = [[[SCAPIClient sharedInstance] opQueue] count];
-                NSLog(@"Operations Queue count is: %i", tempOpCount);
                 
                 if(tempOpCount > 0){
                     [[SCAPIClient sharedInstance] enqueueBatchOfHTTPRequestOperations:[[SCAPIClient sharedInstance] opQueue] progressBlock:^(NSUInteger numberOfFinishedOperations, NSUInteger totalNumberOfOperations) {
                         NSLog(@"Enqueing operation.");
                     } completionBlock:^(NSArray *operations) {
-                        NSLog(@"Done queuing up missed operations. Emptying queue.");
                         [[[SCAPIClient sharedInstance] opQueue] removeAllObjects];
                     }];
                 }
@@ -72,26 +68,13 @@
     }];
     
     if([[SCAPIClient sharedInstance] connectionAvailable]){
-        NSLog(@"requestGETMethod.2 - connection available: %@", NSStringFromBOOL([[SCAPIClient sharedInstance] connectionAvailable]));
+//        NSLog(@"requestGETMethod.2 - connection available: %@", NSStringFromBOOL([[SCAPIClient sharedInstance] connectionAvailable]));
         [[SCAPIClient sharedInstance] enqueueHTTPRequestOperation:operation];
         
     } else{
-        NSLog(@"requestGETMethod.3 - connection NOT Available!!!! queueing up operation. connection: %@", NSStringFromBOOL([[SCAPIClient sharedInstance] connectionAvailable]));
+//        NSLog(@"requestGETMethod.3 - connection NOT Available!!!! queueing up operation. connection: %@", NSStringFromBOOL([[SCAPIClient sharedInstance] connectionAvailable]));
         [[[SCAPIClient sharedInstance] opQueue] addObject:(AFHTTPRequestOperation*)operation];
     }
-    
-    
-    /* original
-    [[SCAPIClient sharedInstance] getPath:[self requestPath]
-                               parameters:[self parseParameters]
-                                  success:^(AFHTTPRequestOperation *operation, id responseObject) {
-     
-                                      [self setResponse:responseObject];
-                                      [requestDelegate requestdidFinishLoading:self];
-                                      
-                                  }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                      NSLog(@"SCRequest %s, error: %@", __PRETTY_FUNCTION__, error);
-                                  }];*/
 }
 
 /**
@@ -106,7 +89,6 @@
 	AFHTTPRequestOperation *operation =
     [[SCAPIClient sharedInstance] HTTPRequestOperationWithRequest:request
                                                           success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                                              NSLog(@"requestPOSTMethod -> got success in POST");
                                                               [self setResponse:responseObject];
                                                               [requestDelegate requestdidFinishLoading:self];
                                                               
@@ -115,11 +97,9 @@
                                                           }];
     
     if ([[SCAPIClient sharedInstance] connectionAvailable]) {
-        NSLog(@"requestPOSTMethod.2 - connection available: %@", NSStringFromBOOL([[SCAPIClient sharedInstance] connectionAvailable]));
         [[SCAPIClient sharedInstance] enqueueHTTPRequestOperation:operation];
 
     } else{
-        NSLog(@"requestPOSTMethod - connection NOT Available!!!! queueing up operation. connection: %@", NSStringFromBOOL([[SCAPIClient sharedInstance] connectionAvailable]));
         [[[SCAPIClient sharedInstance] opQueue] addObject:(AFHTTPRequestOperation*)operation];
     }
 }
@@ -136,25 +116,10 @@
     } else if ([[self requestHTTPMethod] isEqualToString:@"POST"]) {
 
         [self requestPOSTMethod];
-        /*
-         [self recursivePOSTNumberOfTimes:3 success:^(id responseObject) {
-         NSLog(@"start -> got success in tryPOSTNumberOfTimes"); // NEVER CALLED
-         //            [self setResponse:responseObject];
-         //            [requestDelegate requestdidFinishLoading:self];
-         
-         } failure:^(NSError *error) {
-         NSLog(@"start --> %s WITH ERROR--\nERROR: %@", __PRETTY_FUNCTION__, error);
-         }];
-         */
     } else {
         NSLog(@"HTTPMethod not recognized in %s", __PRETTY_FUNCTION__);
     }
 }
-
-
-// Creates HTTP POST and initiates it asynchronously.
-
-
 
 // ensure parameter data are strings.
 // do additional processing here to make sure no params are nil/malformed

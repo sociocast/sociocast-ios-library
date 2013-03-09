@@ -24,10 +24,10 @@
     return [self initWithAPIKey:nil andSecret:nil andClientID:nil];
 }
 
-/** 
+/**
  * Initialize a `Sociocast` object with an APIKey, APISecret and ClientID. This needs to only be
  * initialized one time in your application. APIKey, APISecret and ClientID are
- * provided to you by your Sociocast Client Support Manager. 
+ * provided to you by your Sociocast Client Support Manager.
  * Email support@sociocast.com and see http://www.sociocast.com/dev-center/ for more information.
  * @param key Known APIKey token to be passed as part of the request query string.
  * @param secret A secure APISecret alphanumeric string used to calculate the request signature.
@@ -81,7 +81,7 @@
 }
 
 /**
- * Used to directly classify URLs into Sociocast Content Categorization Taxonomy classifications. 
+ * Used to directly classify URLs into Sociocast Content Categorization Taxonomy classifications.
  * @param parameters An `NSDictionary` containing parameters specific to the REST API Endpoint. See http://www.sociocast.com/dev-center/content_profile/ for more information on specific endpoint requirements.
  * @param delegate Implements the SCRequestDelegate protocol and optionally handles the JSON Response.
  * @return An initialized `SCRequest` object containing the path to the content/profile Endpoint and other details required for the GET operation.
@@ -101,10 +101,10 @@
  @return An initialized `SCRequest` object containing the path to a REST API Endpoint and other details required for a GET/POST operation.
  */
 -(SCRequest *)requestWithPath:(NSString *)path HTTPMethod:(NSString *)HTTPMethod parameters:(NSDictionary *)parameters delegate:(id <SCRequestDelegate>)delegate{
-
+    
     NSString *timeStamp = [NSString stringWithFormat:@"%1.f", [[NSDate date] timeIntervalSince1970]];
     NSString *signatureResult = [self generateSHA256Signature:apiKey APISecret:apiSecret timeStamp:timeStamp];
-        
+    
     // finalize parameters
     NSMutableDictionary *finalParameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
     
@@ -120,19 +120,14 @@
         // Append key/sig/ts to path now.
         path = [NSString stringWithFormat:@"%@?apikey=%@&sig=%@&ts=%@", path, apiKey, signatureResult, timeStamp];
     }
-
-/*    NSLog(@"%s requestWithPath - parameters:", __PRETTY_FUNCTION__);
-    for(id param in finalParameters){
-        NSLog(@"key=%@, value=%@", param, [finalParameters valueForKey:param]);
-    }*/
-
+        
     return [[SCRequest alloc] initWithPath:path HTTPMethod:HTTPMethod parameters:finalParameters delegate:delegate];
 }
 
 /**
  * Compute a signature used to [sign](http://www.sociocast.com/dev-center/authenticating-your-api-access-3/) every API request.
  * Signature consists of a SHA256 Digest based on the following key/value string, sorted in *alphabetical* order: APIKey, APISecret and Unix Timestamp.
- * Note that a +/-5 minutes wiggle period is permitted on the Sociocast server on either side of the current timestamp to allow for reasonable 
+ * Note that a +/-5 minutes wiggle period is permitted on the Sociocast server on either side of the current timestamp to allow for reasonable
  * clock drift and other delays.
  * @param key Sociocast granted APIKey
  * @param secret Sociocast granted APISecret
@@ -153,7 +148,7 @@
         unsigned char hashedChars[CC_SHA256_DIGEST_LENGTH];
         NSData *dataIn = [keyString dataUsingEncoding:NSUTF8StringEncoding];
         CC_SHA256([dataIn bytes], [dataIn length], hashedChars);
-
+        
         NSData *signatureData = [NSData dataWithBytes:hashedChars length:CC_SHA256_DIGEST_LENGTH];
         signatureString = [NSString stringWithFormat:@"%@", signatureData];
         signatureString = [signatureString stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"< >"]];

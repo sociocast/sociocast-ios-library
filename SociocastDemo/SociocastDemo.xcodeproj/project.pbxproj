@@ -295,10 +295,7 @@
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SociocastWorkspace-cbrpfkkcmlmawfgwsulssetueals/Build/Products/Debug-iphoneos\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SOCIOCAST_API_KEY = atlantishome;
-				SOCIOCAST_API_SECRET = atlantishome;
-				SOCIOCAST_CLIENT_ID = C2;
-				USER_HEADER_SEARCH_PATHS = "/Users/jared/Projects/Sociocast/Sociocast/Sociocast/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Sociocast/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -315,10 +312,7 @@
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SociocastWorkspace-cbrpfkkcmlmawfgwsulssetueals/Build/Products/Debug-iphoneos\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SOCIOCAST_API_KEY = atlantishome;
-				SOCIOCAST_API_SECRET = atlantishome;
-				SOCIOCAST_CLIENT_ID = C2;
-				USER_HEADER_SEARCH_PATHS = "/Users/jared/Projects/Sociocast/Sociocast/Sociocast/**";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Sociocast/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

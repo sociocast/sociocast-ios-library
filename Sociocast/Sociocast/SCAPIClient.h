@@ -8,8 +8,13 @@
 
 #import "AFNetworking.h"
 
+//---------------------------------------------------------------------------------
+// To update from Testing Environment to Production, edit SOCIOCAST_BASEURL below.
+//---------------------------------------------------------------------------------
+
 #define SOCIOCAST_BASEURL @"http://api-sandbox.sociocast.com/"
 #define SOCIOCAST_VERSION @"1.0"
+
 
 @interface SCAPIClient : AFHTTPClient{
 

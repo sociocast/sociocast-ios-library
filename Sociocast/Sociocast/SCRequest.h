@@ -10,7 +10,6 @@
 #import "AFNetworking.h"
 #import "SCAPIClient.h"
 
-#define TIMEOUT_INTERVAL    180.0
 #define NSStringFromBOOL(amIBOOL) amIBOOL? @"YES" : @"NO"
 
 @protocol SCRequestDelegate;
@@ -23,7 +22,6 @@
     id <SCRequestDelegate> requestDelegate;
     
     NSDictionary *response;
-
 }
 
 /**

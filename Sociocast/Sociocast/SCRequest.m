@@ -8,6 +8,12 @@
 
 #import "SCRequest.h"
 
+/**
+ `SCRequest` objects are used to interact with the Sociocast REST API Endpoints.
+ See http://www.sociocast.com/dev-center/ for more information on working with the Sociocast REST API.
+ */
+
+
 @implementation SCRequest
 
 @synthesize requestPath;

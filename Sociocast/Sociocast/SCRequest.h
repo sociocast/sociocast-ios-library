@@ -32,7 +32,6 @@
 -(NSDictionary *)parseParameters;
 -(void)requestGETMethod;
 -(void)requestPOSTMethod;
-//-(void)recursivePOSTNumberOfTimes:(NSUInteger)numTimes success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
 @property (nonatomic, strong) NSString *requestPath;
 @property (nonatomic, strong) NSString *requestHTTPMethod;
@@ -44,13 +43,23 @@
 @end
 
 /**
- * The SCRequestDelegate describes a delegate object given the option of responding when the request operation finishes.
- *
+ * The `SCRequestDelegate` protocol describes a delegate object given the option of taking action when the `SCRequest` operation finishes. The `SCRequest` object returned will contain a `JSON` response from the API.
  */
 @protocol SCRequestDelegate
 @optional
--(void)requestDidStartLoading:(SCRequest *)request;
+
+///----------------------------------------------------
+/// @name Delegate Functions
+///----------------------------------------------------
+
+/**
+ * Called when the `SCRequest` has finished loading.
+ */
 -(void)requestdidFinishLoading:(SCRequest *)request;
+
+/**
+ * Called when the `SCRequest` fails with an `NSError`.
+ */
 -(void)request:(SCRequest *)request didFailWithErrror:(NSError *)error;
 
 @end

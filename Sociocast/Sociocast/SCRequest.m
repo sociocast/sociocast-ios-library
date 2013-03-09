@@ -63,7 +63,8 @@
         [self setResponse:responseObject];
         [requestDelegate requestdidFinishLoading:self];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"requestGETMethod.1 %s\nERROR:\n%@", __PRETTY_FUNCTION__, error);
+//        NSLog(@"requestGETMethod.1 %s\nERROR:\n%@", __PRETTY_FUNCTION__, error);
+        [requestDelegate request:self didFailWithErrror:error];
         [[[SCAPIClient sharedInstance]opQueue]addObject:(AFHTTPRequestOperation *)operation];
     }];
     
@@ -93,7 +94,8 @@
                                                               [self setResponse:responseObject];
                                                               [requestDelegate requestdidFinishLoading:self];
                                                               
-                                                          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {                                                                                                 NSLog(@"requestPOSTMethod.2 %s\nERROR:\n%@", __PRETTY_FUNCTION__, error);
+                                                          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {                                                                                                 //NSLog(@"requestPOSTMethod.2 %s\nERROR:\n%@", __PRETTY_FUNCTION__, error);
+                                                              [requestDelegate request:self didFailWithErrror:error];                                                              
                                                               [[[SCAPIClient sharedInstance] opQueue] addObject:(AFHTTPRequestOperation*)operation];
                                                           }];
     

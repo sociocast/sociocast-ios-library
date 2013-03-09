@@ -41,7 +41,7 @@
     return self;
 }
 
-#pragma mark - Endpoints
+#pragma mark - REST API Endpoints
 
 /**
  * Triggers an Entity Event to be tracked by Sociocast.
@@ -56,7 +56,7 @@
 
 /**
  * Used to pass Entity Attributes to Sociocast (i.e. Attributes specific to an Entity as opposed to an event)
- * @param parameters An NSDictionary containing parameters specific to the REST API Endpoint. See http://www.sociocast.com/dev-center/entityobserve/ for more information on specific endpoint requirements.
+ * @param parameters An NSDictionary containing parameters specific to the REST API Endpoint. See http://www.sociocast.com/dev-center/entityattributes/ for more information on specific endpoint requirements.
  * @param delegate Implements the SCRequestDelegate protocol and optionally handles the JSON Response.
  * @return An initialized SCRequest object containing the path to the entity/attributes Endpoint and other details required for the POST operation.
  */
@@ -66,8 +66,8 @@
 }
 
 /**
- * Used to pass 
- * @param parameters An NSDictionary containing parameters specific to the REST API Endpoint. See http://www.sociocast.com/dev-center/entityobserve/ for more information on specific endpoint requirements.
+ * Used to get Entity attributes and Entity predictions (i.e. “scored” attributes). These are the attributes that were passed in as Entity Attributes (/entity/attributes) or using Entity Observe (/entity/observe).
+ * @param parameters An NSDictionary containing parameters specific to the REST API Endpoint. See http://www.sociocast.com/dev-center/entityprofile/ for more information on specific endpoint requirements.
  * @param delegate Implements the SCRequestDelegate protocol and optionally handles the JSON Response.
  * @return An initialized SCRequest object containing the path to the entity/profile Endpoint and other details required for the POST operation.
  */
@@ -76,8 +76,8 @@
 }
 
 /**
- * Used to pass 
- * @param parameters An NSDictionary containing parameters specific to the REST API Endpoint. See http://www.sociocast.com/dev-center/entityobserve/ for more information on specific endpoint requirements.
+ * Used to directly classify URLs into Sociocast Content Categorization Taxonomy classifications. 
+ * @param parameters An NSDictionary containing parameters specific to the REST API Endpoint. See http://www.sociocast.com/dev-center/content_profile/ for more information on specific endpoint requirements.
  * @param delegate Implements the SCRequestDelegate protocol and optionally handles the JSON Response.
  * @return An initialized SCRequest object containing the path to the content/profile Endpoint and other details required for the GET operation.
  */
@@ -132,6 +132,7 @@
  * @param key Sociocast granted APIKey
  * @param secret Sociocast granted APISecret
  * @param timeStamp Reflects the number of seconds since the Unix Epoch (January 1 1970 00:00:00 GMT) at the time a request was made.
+ * @return A NSString containing a SHA-256 Signature used to sign and authenticate every SCRequest sent to the Sociocast REST API.
  */
 -(NSString *)generateSHA256Signature:(NSString *)key APISecret:(NSString *)secret timeStamp:(NSString *)timeStamp{
     
@@ -147,7 +148,7 @@
         unsigned char hashedChars[CC_SHA256_DIGEST_LENGTH];
         NSData *dataIn = [keyString dataUsingEncoding:NSUTF8StringEncoding];
         CC_SHA256([dataIn bytes], [dataIn length], hashedChars);
-        // sloppy but works. refactor.
+
         NSData *signatureData = [NSData dataWithBytes:hashedChars length:CC_SHA256_DIGEST_LENGTH];
         signatureString = [NSString stringWithFormat:@"%@", signatureData];
         signatureString = [signatureString stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"< >"]];

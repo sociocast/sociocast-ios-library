@@ -51,7 +51,7 @@
 }
 
 /** 
- * Creates HTTP GET and initiates it asynchronously.
+ * Create a HTTP GET and initiate it asynchronously.
  */
 -(void)requestGETMethod{
     NSLog(@"requestGETMethod");
@@ -77,8 +77,9 @@
     }
 }
 
+
 /**
- * Creates HTTP POST and initiates it asynchronously.
+ * Create a HTTP POST and initiate it asynchronously.
  */
 -(void)requestPOSTMethod{
     

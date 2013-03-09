@@ -1,0 +1,1005 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>Sociocast Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Sociocast REST API </a></h1>
+				<a id="developerHome" href="../index.html">Sociocast Networks LLC</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">Sociocast Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/apiKey">&nbsp;&nbsp;&nbsp;&nbsp;apiKey</option>
+	
+	<option value="//api/name/apiSecret">&nbsp;&nbsp;&nbsp;&nbsp;apiSecret</option>
+	
+	<option value="//api/name/clientID">&nbsp;&nbsp;&nbsp;&nbsp;clientID</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/contentProfile:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- contentProfile:delegate:</option>
+	
+	<option value="//api/name/entityAttributes:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- entityAttributes:delegate:</option>
+	
+	<option value="//api/name/entityObserve:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- entityObserve:delegate:</option>
+	
+	<option value="//api/name/entityProfile:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- entityProfile:delegate:</option>
+	
+	<option value="//api/name/generateSHA256Signature:APISecret:timeStamp:">&nbsp;&nbsp;&nbsp;&nbsp;- generateSHA256Signature:APISecret:timeStamp:</option>
+	
+	<option value="//api/name/initWithAPIKey:andSecret:andClientID:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAPIKey:andSecret:andClientID:</option>
+	
+	<option value="//api/name/requestWithPath:HTTPMethod:parameters:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- requestWithPath:HTTPMethod:parameters:delegate:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properly Initializing a Sociocast Object">Properly Initializing a Sociocast Object</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Sociocast REST API Endpoints">Sociocast REST API Endpoints</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Sociocast Object Functionality">Sociocast Object Functionality</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiKey">apiKey</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiSecret">apiSecret</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clientID">clientID</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/contentProfile:delegate:">contentProfile:delegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/entityAttributes:delegate:">entityAttributes:delegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/entityObserve:delegate:">entityObserve:delegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/entityProfile:delegate:">entityProfile:delegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generateSHA256Signature:APISecret:timeStamp:">generateSHA256Signature:APISecret:timeStamp:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAPIKey:andSecret:andClientID:">initWithAPIKey:andSecret:andClientID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithPath:HTTPMethod:parameters:delegate:">requestWithPath:HTTPMethod:parameters:delegate:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="Sociocast Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">Sociocast Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">Sociocast.h<br />Sociocast.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>Sociocast</code> objects are used to interact with the Sociocast REST API Endpoints using <a href="../Classes/SCRequest.html"><code>SCRequest</code></a> objects.
+See <a href="http://www.sociocast.com/dev-center/">http://www.sociocast.com/dev-center/</a> for more information on working with the Sociocast REST API.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Properly Initializing a Sociocast Object" name="task_Properly Initializing a Sociocast Object"></a>
+						<h3 class="subsubtitle task-title">Properly Initializing a Sociocast Object</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithAPIKey:andSecret:andClientID:">&ndash;&nbsp;initWithAPIKey:andSecret:andClientID:</a></code>
+		<span class="tooltip"><p>Initialize a <code>Sociocast</code> object with an APIKey, APISecret and ClientID. This needs to only be
+initialized one time in your application. APIKey, APISecret and ClientID are
+provided to you by your Sociocast Client Support Manager.
+Email support@sociocast.com and see <a href="http://www.sociocast.com/dev-center/">http://www.sociocast.com/dev-center/</a> for more information.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Sociocast REST API Endpoints" name="task_Sociocast REST API Endpoints"></a>
+						<h3 class="subsubtitle task-title">Sociocast REST API Endpoints</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/entityObserve:delegate:">&ndash;&nbsp;entityObserve:delegate:</a></code>
+		<span class="tooltip"><p>Triggers an Entity Event to be tracked by Sociocast.
+Corresponds with the entity/observe API endpoint.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/entityAttributes:delegate:">&ndash;&nbsp;entityAttributes:delegate:</a></code>
+		<span class="tooltip"><p>Used to pass Entity Attributes to Sociocast (i.e. Attributes specific to an Entity as opposed to an event)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/entityProfile:delegate:">&ndash;&nbsp;entityProfile:delegate:</a></code>
+		<span class="tooltip"><p>Used to get Entity attributes and Entity predictions (i.e. “scored” attributes). These are the attributes that were passed in as Entity Attributes (/entity/attributes) or using Entity Observe (/entity/observe).</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/contentProfile:delegate:">&ndash;&nbsp;contentProfile:delegate:</a></code>
+		<span class="tooltip"><p>Used to directly classify URLs into Sociocast Content Categorization Taxonomy classifications.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Sociocast Object Functionality" name="task_Sociocast Object Functionality"></a>
+						<h3 class="subsubtitle task-title">Sociocast Object Functionality</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWithPath:HTTPMethod:parameters:delegate:">&ndash;&nbsp;requestWithPath:HTTPMethod:parameters:delegate:</a></code>
+		<span class="tooltip"><p>Create a Sociocast Request object <a href="../Classes/SCRequest.html"><code>SCRequest</code></a>. Used in lieu of a specific Endpoint function.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/generateSHA256Signature:APISecret:timeStamp:">&ndash;&nbsp;generateSHA256Signature:APISecret:timeStamp:</a></code>
+		<span class="tooltip"><p>Compute a signature used to <a href="http://www.sociocast.com/dev-center/authenticating-your-api-access-3/">sign</a> every API request.
+Signature consists of a SHA256 Digest based on the following key/value string, sorted in <em>alphabetical</em> order: APIKey, APISecret and Unix Timestamp.
+Note that a +/-5 minutes wiggle period is permitted on the Sociocast server on either side of the current timestamp to allow for reasonable
+clock drift and other delays.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						<h3 class="subsubtitle task-title">Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/apiKey">&nbsp;&nbsp;apiKey</a></code>
+		<span class="tooltip"><p>The Sociocast REST API requires a known token to be passed as part of the request query string. The token is called an apikey. The value of the token is an alphanumeric string assigned to you by your Sociocast Client Support Manager and/or upon registration.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/apiSecret">&nbsp;&nbsp;apiSecret</a></code>
+		<span class="tooltip"><p>An apisecret is a secure alphanumeric string and will be used to calculate the SHA-256 signature, which is in turn used to sign and authenticate all Sociocast REST API requests.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clientID">&nbsp;&nbsp;clientID</a></code>
+		<span class="tooltip"><p>The Client ID is required by certain Sociocast REST API Endpoints. Your Sociocast Client Support Manager will give this to you.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/apiKey" title="apiKey"></a>
+	<h3 class="subsubtitle method-title">apiKey</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Sociocast REST API requires a known token to be passed as part of the request query string. The token is called an apikey. The value of the token is an alphanumeric string assigned to you by your Sociocast Client Support Manager and/or upon registration.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *apiKey</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The Sociocast REST API requires a known token to be passed as part of the request query string. The token is called an apikey. The value of the token is an alphanumeric string assigned to you by your Sociocast Client Support Manager and/or upon registration.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">Sociocast.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/apiSecret" title="apiSecret"></a>
+	<h3 class="subsubtitle method-title">apiSecret</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An apisecret is a secure alphanumeric string and will be used to calculate the SHA-256 signature, which is in turn used to sign and authenticate all Sociocast REST API requests.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *apiSecret</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>An apisecret is a secure alphanumeric string and will be used to calculate the SHA-256 signature, which is in turn used to sign and authenticate all Sociocast REST API requests.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">Sociocast.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/clientID" title="clientID"></a>
+	<h3 class="subsubtitle method-title">clientID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Client ID is required by certain Sociocast REST API Endpoints. Your Sociocast Client Support Manager will give this to you.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *clientID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The Client ID is required by certain Sociocast REST API Endpoints. Your Sociocast Client Support Manager will give this to you.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">Sociocast.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/contentProfile:delegate:" title="contentProfile:delegate:"></a>
+	<h3 class="subsubtitle method-title">contentProfile:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Used to directly classify URLs into Sociocast Content Categorization Taxonomy classifications.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (SCRequest *)contentProfile:(NSDictionary *)<em>parameters</em> delegate:(id&lt;SCRequestDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parameters</em></dt>
+			<dd><p>An <code>NSDictionary</code> containing parameters specific to the REST API Endpoint. See <a href="http://www.sociocast.com/dev-center/content_profile/">http://www.sociocast.com/dev-center/content_profile/</a> for more information on specific endpoint requirements.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>Implements the <a href="../Protocols/SCRequestDelegate.html">SCRequestDelegate</a> protocol and optionally handles the JSON Response.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An initialized <a href="../Classes/SCRequest.html"><code>SCRequest</code></a> object containing the path to the content/profile Endpoint and other details required for the GET operation.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Used to directly classify URLs into Sociocast Content Categorization Taxonomy classifications.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">Sociocast.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/entityAttributes:delegate:" title="entityAttributes:delegate:"></a>
+	<h3 class="subsubtitle method-title">entityAttributes:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Used to pass Entity Attributes to Sociocast (i.e. Attributes specific to an Entity as opposed to an event)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (SCRequest *)entityAttributes:(NSDictionary *)<em>parameters</em> delegate:(id&lt;SCRequestDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parameters</em></dt>
+			<dd><p>An <code>NSDictionary</code> containing parameters specific to the REST API Endpoint. See <a href="http://www.sociocast.com/dev-center/entityattributes/">http://www.sociocast.com/dev-center/entityattributes/</a> for more information on specific endpoint requirements.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>Implements the <a href="../Protocols/SCRequestDelegate.html">SCRequestDelegate</a> protocol and optionally handles the JSON Response.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An initialized <a href="../Classes/SCRequest.html"><code>SCRequest</code></a> object containing the path to the entity/attributes Endpoint and other details required for the POST operation.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Used to pass Entity Attributes to Sociocast (i.e. Attributes specific to an Entity as opposed to an event)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">Sociocast.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/entityObserve:delegate:" title="entityObserve:delegate:"></a>
+	<h3 class="subsubtitle method-title">entityObserve:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Triggers an Entity Event to be tracked by Sociocast.
+Corresponds with the entity/observe API endpoint.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (SCRequest *)entityObserve:(NSDictionary *)<em>parameters</em> delegate:(id&lt;SCRequestDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parameters</em></dt>
+			<dd><p>An <code>NSDictionary</code> containing parameters specific to the REST API Endpoint. See <a href="http://www.sociocast.com/dev-center/entityobserve/">http://www.sociocast.com/dev-center/entityobserve/</a> for more information on specific endpoint requirements.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>Implements the <a href="../Protocols/SCRequestDelegate.html">SCRequestDelegate</a> protocol and optionally handles the JSON Response.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An initialized <a href="../Classes/SCRequest.html"><code>SCRequest</code></a> object containing the path to the entity/observe Endpoint and other details required for the POST operation.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Triggers an Entity Event to be tracked by Sociocast.
+Corresponds with the entity/observe API endpoint.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">Sociocast.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/entityProfile:delegate:" title="entityProfile:delegate:"></a>
+	<h3 class="subsubtitle method-title">entityProfile:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Used to get Entity attributes and Entity predictions (i.e. “scored” attributes). These are the attributes that were passed in as Entity Attributes (/entity/attributes) or using Entity Observe (/entity/observe).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (SCRequest *)entityProfile:(NSDictionary *)<em>parameters</em> delegate:(id&lt;SCRequestDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parameters</em></dt>
+			<dd><p>An <code>NSDictionary</code> containing parameters specific to the REST API Endpoint. See <a href="http://www.sociocast.com/dev-center/entityprofile/">http://www.sociocast.com/dev-center/entityprofile/</a> for more information on specific endpoint requirements.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>Implements the <a href="../Protocols/SCRequestDelegate.html">SCRequestDelegate</a> protocol and optionally handles the JSON Response.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An initialized <a href="../Classes/SCRequest.html"><code>SCRequest</code></a> object containing the path to the entity/profile Endpoint and other details required for the POST operation.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Used to get Entity attributes and Entity predictions (i.e. “scored” attributes). These are the attributes that were passed in as Entity Attributes (/entity/attributes) or using Entity Observe (/entity/observe).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">Sociocast.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/generateSHA256Signature:APISecret:timeStamp:" title="generateSHA256Signature:APISecret:timeStamp:"></a>
+	<h3 class="subsubtitle method-title">generateSHA256Signature:APISecret:timeStamp:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Compute a signature used to <a href="http://www.sociocast.com/dev-center/authenticating-your-api-access-3/">sign</a> every API request.
+Signature consists of a SHA256 Digest based on the following key/value string, sorted in <em>alphabetical</em> order: APIKey, APISecret and Unix Timestamp.
+Note that a +/-5 minutes wiggle period is permitted on the Sociocast server on either side of the current timestamp to allow for reasonable
+clock drift and other delays.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)generateSHA256Signature:(NSString *)<em>key</em> APISecret:(NSString *)<em>secret</em> timeStamp:(NSString *)<em>timeStamp</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>Sociocast granted APIKey</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>secret</em></dt>
+			<dd><p>Sociocast granted APISecret</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeStamp</em></dt>
+			<dd><p>Reflects the number of seconds since the Unix Epoch (January 1 1970 00:00:00 GMT) at the time a request was made.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A <code>NSString</code> containing a SHA-256 Signature used to sign and authenticate every <a href="../Classes/SCRequest.html">SCRequest</a> sent to the Sociocast REST API.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Compute a signature used to <a href="http://www.sociocast.com/dev-center/authenticating-your-api-access-3/">sign</a> every API request.
+Signature consists of a SHA256 Digest based on the following key/value string, sorted in <em>alphabetical</em> order: APIKey, APISecret and Unix Timestamp.
+Note that a +/-5 minutes wiggle period is permitted on the Sociocast server on either side of the current timestamp to allow for reasonable
+clock drift and other delays.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">Sociocast.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithAPIKey:andSecret:andClientID:" title="initWithAPIKey:andSecret:andClientID:"></a>
+	<h3 class="subsubtitle method-title">initWithAPIKey:andSecret:andClientID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize a <code>Sociocast</code> object with an APIKey, APISecret and ClientID. This needs to only be
+initialized one time in your application. APIKey, APISecret and ClientID are
+provided to you by your Sociocast Client Support Manager.
+Email support@sociocast.com and see <a href="http://www.sociocast.com/dev-center/">http://www.sociocast.com/dev-center/</a> for more information.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithAPIKey:(NSString *)<em>key</em> andSecret:(NSString *)<em>secret</em> andClientID:(NSString *)<em>cID</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>Known APIKey token to be passed as part of the request query string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>secret</em></dt>
+			<dd><p>A secure APISecret alphanumeric string used to calculate the request signature.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cID</em></dt>
+			<dd><p>Your Sociocast Client ID is provided to you by your Sociocast Client Support Manager</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An initialized <code>Sociocast</code> object containing details necessary to authenticate each API request.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initialize a <code>Sociocast</code> object with an APIKey, APISecret and ClientID. This needs to only be
+initialized one time in your application. APIKey, APISecret and ClientID are
+provided to you by your Sociocast Client Support Manager.
+Email support@sociocast.com and see <a href="http://www.sociocast.com/dev-center/">http://www.sociocast.com/dev-center/</a> for more information.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">Sociocast.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWithPath:HTTPMethod:parameters:delegate:" title="requestWithPath:HTTPMethod:parameters:delegate:"></a>
+	<h3 class="subsubtitle method-title">requestWithPath:HTTPMethod:parameters:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a Sociocast Request object <a href="../Classes/SCRequest.html"><code>SCRequest</code></a>. Used in lieu of a specific Endpoint function.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (SCRequest *)requestWithPath:(NSString *)<em>path</em> HTTPMethod:(NSString *)<em>HTTPMethod</em> parameters:(NSDictionary *)<em>parameters</em> delegate:(id&lt;SCRequestDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>path</em></dt>
+			<dd><p>A Sociocast REST API Endpoint</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>HTTPMethod</em></dt>
+			<dd><p>The HTTP request-response methods: GET or POST</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parameters</em></dt>
+			<dd><p>Parameters specific to the Sociocast REST Endpoint, including reserved JSON Keys and Optional keys. See <a href="http://www.sociocast.com/dev-center/">http://www.sociocast.com/dev-center/</a> for details on specific Endpoint requirements.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>A delegate object that complies with the <a href="../Protocols/SCRequestDelegate.html"><code>SCRequestDelegate</code></a> protocol. Will be called asynchronously upon completion or failure of the <a href="../Classes/SCRequest.html">SCRequest</a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An initialized <a href="../Classes/SCRequest.html"><code>SCRequest</code></a> object containing the path to a REST API Endpoint and other details required for a GET/POST operation.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Create a Sociocast Request object <a href="../Classes/SCRequest.html"><code>SCRequest</code></a>. Used in lieu of a specific Endpoint function.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">Sociocast.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Sociocast Networks LLC. All rights reserved. (Last updated: 2013-03-08)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

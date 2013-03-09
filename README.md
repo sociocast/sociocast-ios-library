@@ -1,4 +1,4 @@
-Sociocast
+Sociocast REST API Wrapper for iOS
 =========
 A wrapper class for the Sociocast REST API.
 See the [Sociocast Developers Center](http://www.sociocast.com/dev-center/) for more details.

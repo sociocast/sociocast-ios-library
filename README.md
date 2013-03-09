@@ -17,7 +17,7 @@ Make sure to link the following libraries by going to the project editor and sel
 #endif
 ````
 
-If your application has difficulty finding the Sociocast Wrapper Library, ensure that you've set the User Header Search Paths for your project. This setting is located in the Project Editor, selecting your application target. Select the Build Settings tab and search for "User Header Search Paths".
+If your application has difficulty finding the Sociocast Wrapper Library, ensure that you've set the User Header Search Paths for your project. Open the Project Editor and select your application target. Select the Build Settings tab and search for "User Header Search Paths".
 
 #### To update from Testing Environment to Production, in SCAPIClient.h, update:
 ````

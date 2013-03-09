@@ -25,10 +25,6 @@
 
 #pragma mark - SCRequestDelegate
 
--(void)requestDidStartLoading:(SCRequest *)request{
-    // Do things like start networkActivityIndicator here.
-}
-
 -(void)requestdidFinishLoading:(SCRequest *)request{
     self.response = request.response;
     self.request = nil;

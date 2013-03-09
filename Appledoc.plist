@@ -8,6 +8,7 @@
 		<string>Libraries</string>
 		<string>Frameworks</string>
 		<string>AFNetworking</string>
+		<string>SociocastDemo</string>
 	</array>
 	<key>--project-name</key>
 	<string>Sociocast REST API</string>

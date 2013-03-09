@@ -17,7 +17,7 @@
 @synthesize response;
 
 
--(id)initWithPath:(NSString *)path HTTPMethod:(NSString *)HTTPMethod parameters:(NSDictionary *)parameters delegate:(id)delegate{
+-(SCRequest *)initWithPath:(NSString *)path HTTPMethod:(NSString *)HTTPMethod parameters:(NSDictionary *)parameters delegate:(id<SCRequestDelegate>)delegate{
     
     self = [super init];
     if (self){
@@ -50,44 +50,37 @@
     return self;
 }
 
-/** 
- * Create a HTTP GET and initiate it asynchronously.
- */
 -(void)requestGETMethod{
     NSLog(@"requestGETMethod");
     
 	NSMutableURLRequest *request = [[SCAPIClient sharedInstance] requestWithMethod:@"GET" path:[self requestPath] parameters:[self parseParameters]];
     
-    AFHTTPRequestOperation *operation =    
+    AFHTTPRequestOperation *operation =
     [[SCAPIClient sharedInstance] HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self setResponse:responseObject];
         [requestDelegate requestdidFinishLoading:self];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"requestGETMethod.1 %s\nERROR:\n%@", __PRETTY_FUNCTION__, error);
+        //        NSLog(@"requestGETMethod.1 %s\nERROR:\n%@", __PRETTY_FUNCTION__, error);
         [requestDelegate request:self didFailWithErrror:error];
         [[[SCAPIClient sharedInstance]opQueue]addObject:(AFHTTPRequestOperation *)operation];
     }];
     
     if([[SCAPIClient sharedInstance] connectionAvailable]){
-//        NSLog(@"requestGETMethod.2 - connection available: %@", NSStringFromBOOL([[SCAPIClient sharedInstance] connectionAvailable]));
+        //        NSLog(@"requestGETMethod.2 - connection available: %@", NSStringFromBOOL([[SCAPIClient sharedInstance] connectionAvailable]));
         [[SCAPIClient sharedInstance] enqueueHTTPRequestOperation:operation];
         
     } else{
-//        NSLog(@"requestGETMethod.3 - connection NOT Available!!!! queueing up operation. connection: %@", NSStringFromBOOL([[SCAPIClient sharedInstance] connectionAvailable]));
+        //        NSLog(@"requestGETMethod.3 - connection NOT Available! Queueing up operation. "));
         [[[SCAPIClient sharedInstance] opQueue] addObject:(AFHTTPRequestOperation*)operation];
     }
 }
 
-
-/**
- * Create a HTTP POST and initiate it asynchronously.
- */
 -(void)requestPOSTMethod{
     
     NSLog(@"requestPOSTMethod");
     
 	NSMutableURLRequest *request = [[SCAPIClient sharedInstance] requestWithMethod:@"POST" path:[self requestPath] parameters:[self requestParameters]];
-    //    AFJSONRequestOperation *operation = // SHOULD WE BE USING THIS INSTEAD PERHAPS.
+    
 	AFHTTPRequestOperation *operation =
     [[SCAPIClient sharedInstance] HTTPRequestOperationWithRequest:request
                                                           success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -95,37 +88,33 @@
                                                               [requestDelegate requestdidFinishLoading:self];
                                                               
                                                           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {                                                                                                 //NSLog(@"requestPOSTMethod.2 %s\nERROR:\n%@", __PRETTY_FUNCTION__, error);
-                                                              [requestDelegate request:self didFailWithErrror:error];                                                              
+                                                              [requestDelegate request:self didFailWithErrror:error];
                                                               [[[SCAPIClient sharedInstance] opQueue] addObject:(AFHTTPRequestOperation*)operation];
                                                           }];
     
     if ([[SCAPIClient sharedInstance] connectionAvailable]) {
         [[SCAPIClient sharedInstance] enqueueHTTPRequestOperation:operation];
-
+        
     } else{
         [[[SCAPIClient sharedInstance] opQueue] addObject:(AFHTTPRequestOperation*)operation];
     }
 }
 
-/**
- * Initialize an SCRequest object.
- */
 -(void)start{
-//        NSLog(@"start------->");
+    
     if ([[self requestHTTPMethod] isEqualToString:@"GET"]) {
         
         [self requestGETMethod];
         
     } else if ([[self requestHTTPMethod] isEqualToString:@"POST"]) {
-
+        
         [self requestPOSTMethod];
     } else {
-        NSLog(@"HTTPMethod not recognized in %s", __PRETTY_FUNCTION__);
+        NSLog(@"SCRequest: HTTPMethod not recognized in %s", __PRETTY_FUNCTION__);
     }
 }
 
-// ensure parameter data are strings.
-// do additional processing here to make sure no params are nil/malformed
+// Ensure that parameter data are strings.
 -(NSDictionary *)parseParameters{
     
     NSMutableDictionary *pairs = [[NSMutableDictionary alloc] init];
@@ -145,10 +134,6 @@
         }
         [pairs setObject:value forKey:key];
     }
-    
-    /*for(id key in pairs){
-     NSLog(@"parseParameters ---> parseParameters: %@=%@", key, [pairs objectForKey:key]);
-     }*/
     
     return pairs;
 }

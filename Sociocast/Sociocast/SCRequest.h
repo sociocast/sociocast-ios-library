@@ -26,11 +26,31 @@
 
 }
 
--(id)initWithPath:(NSString *)path HTTPMethod:(NSString *)HTTPMethod parameters:(NSDictionary *)parameters delegate:(id)delegate;
+/**
+ Initialize a `SCRequest` object with an Endpoint path. Specify the HTTP Method (GET/POST supported), the parameters specific to that Endpoint, and a callback delegate that conforms to the `SCRequestDelegate` protocol.
+ @param path An Endpoint from the Sociocast REST API
+ @param HTTPMethod GET or POST
+ @param parameters An `NSDictionary` containing parameters specific to the REST API Endpoint. See http://www.sociocast.com/dev-center/ for more information on specific endpoint requirements.
+ @param delegate A delegate which implements the optional `SCRequestDelegate` functions.
+ @return An initialized `SCRequest` object.
+ */
+-(SCRequest *)initWithPath:(NSString *)path HTTPMethod:(NSString *)HTTPMethod parameters:(NSDictionary *)parameters delegate:(id<SCRequestDelegate>)delegate;
+
+/**
+ * Begin the `HTTP` Operation on the `SCRequest` object.
+ */
 -(void)start;
 
 -(NSDictionary *)parseParameters;
+
+/**
+ * Create a HTTP GET and initiate it asynchronously. It is advised to interact with the Sociocast REST API through the Sociocast objects and not call this function directly.
+ */
 -(void)requestGETMethod;
+
+/**
+ * Create a HTTP POST and initiate it asynchronously. It is advised to interact with the Sociocast REST API through the Sociocast objects and not call this function directly.
+ */
 -(void)requestPOSTMethod;
 
 @property (nonatomic, strong) NSString *requestPath;
@@ -49,11 +69,11 @@
 @optional
 
 ///----------------------------------------------------
-/// @name Delegate Functions
+/// @name Delegate Functions (Optional)
 ///----------------------------------------------------
 
 /**
- * Called when the `SCRequest` has finished loading.
+ * Called when the `SCRequest` has finished loading. The `SCRequest` variable contains the `JSON` response from the Sociocast Endpoint call.
  */
 -(void)requestdidFinishLoading:(SCRequest *)request;
 

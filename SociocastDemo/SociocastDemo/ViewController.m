@@ -42,6 +42,7 @@
     self.response = nil;
     self.request = nil;
 }
+
 #pragma mark - 
 
 -(void)prepareForRequest{

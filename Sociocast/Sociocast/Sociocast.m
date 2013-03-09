@@ -10,6 +10,7 @@
 
 /**
  `Sociocast` objects are used to interact with the Sociocast REST API Endpoints using `SCRequest` objects.
+ See http://www.sociocast.com/dev-center/ for more information on working with the Sociocast REST API.
  */
 
 

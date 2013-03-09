@@ -59,7 +59,6 @@
     NSDictionary *obsDict = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.techcrunch.com", @"url", @"technology", @"txt", nil];
     NSString *timeStamp = [NSString stringWithFormat:@"%1.f", [[NSDate date] timeIntervalSince1970]];
     
-    // entity/observe - POST
     NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:
                                 SOCIOCAST_CLIENT_ID, @"clid",
                                 @"sociocastAPITest_01", @"eid",

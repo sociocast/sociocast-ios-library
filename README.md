@@ -32,6 +32,7 @@ to
 ````
 #define SOCIOCAST_VERSION @"1.0"
 ````
+The Sociocast REST API Wrapper uses [AFNetworking](https://github.com/AFNetworking/AFNetworking), which is included in the repository.
 
 #### XCode Appledoc documentation
 To generate Appledoc-style documentation and auto-install in XCode, use [Appledoc](http://gentlebytes.com/appledoc/).

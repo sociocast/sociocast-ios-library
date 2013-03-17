@@ -1,7 +1,6 @@
-Sociocast REST API Wrapper for iOS
-=========
-A wrapper class for the Sociocast REST API.
-See the [Sociocast Developers Center](http://www.sociocast.com/dev-center/) for more details.
+#Sociocast iOS Library
+
+The Sociocast iOS Librayr is a wrapper library for the Sociocast REST API. See the [Sociocast Developers Center](http://www.sociocast.com/dev-center/) for more details.
 
 
 Make sure to link the following libraries by going to the project editor and selecting your application target. Select the Build Phases tab and expand the "Link Binary with Libraries" section. Click the plus button and choose the following two libraries to add to the phase:

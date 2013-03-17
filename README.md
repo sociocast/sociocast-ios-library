@@ -1,3 +1,5 @@
+![Alt text](/images/logo.png)
+
 #Sociocast iOS Library
 
 ##Overview
